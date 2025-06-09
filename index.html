@@ -73,24 +73,24 @@
 <div class="section">
   <h2>📬 Contact</h2>
 
-  <button onclick="showEmail()">Email</button>
-  <span id="email" style="margin-left: 10px;"></span>
+  <a href="mailto:kalyandangi@outlook.com" style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  ">
+    Email
+  </a>
 
-  <p>
+  <p style="margin-top: 10px;">
     <a href="https://www.linkedin.com/in/kalyandangi/" target="_blank">LinkedIn</a> |
     <a href="https://github.com/johndoe" target="_blank">GitHub</a>
   </p>
 </div>
 
-<script>
-  function showEmail() {
-    const user = "kalyan";
-    const domain = "outlook.com";
-    const email = user + "@" + domain;
-    const mailtoLink = `<a href="mailto:${email}">${email}</a>`;
-    document.getElementById("email").innerHTML = mailtoLink;
-  }
-</script>
 
 </body>
 </html>
