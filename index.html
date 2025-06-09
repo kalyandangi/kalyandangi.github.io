@@ -70,13 +70,25 @@
   </div>
 
   <!-- 📬 Contact -->
-  <div class="section">
-    <h2>📬 Contact</h2>
-    <p>Email: kalyandangi@outlook.com</p>
-    <p>
-      <a href="https://www.linkedin.com/in/kalyandangi/" target="_blank">LinkedIn</a> 
-    </p>
-  </div>
+<div class="section">
+  <h2>📬 Contact</h2>
 
+  <p>Email: <span id="email">[click to reveal]</span></p>
+  <button onclick="showEmail()">Show Email</button>
+
+  <p>
+    <a href="https://www.linkedin.com/in/kalyandangi/" target="_blank">LinkedIn</a> 
+  </p>
+</div>
+
+<script>
+  function showEmail() {
+    const user = "kalyandangi";
+    const domain = "outlook.com";
+    const email = user + "@" + domain;
+    const link = `<a href="mailto:${email}">${email}</a>`;
+    document.getElementById("email").innerHTML = link;
+  }
+</script>
 </body>
 </html>
