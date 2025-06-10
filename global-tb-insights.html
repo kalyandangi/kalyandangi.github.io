@@ -21,18 +21,34 @@
     .section {
       margin-bottom: 50px;
     }
-    iframe {
-      border: none;
-      border-radius: 10px;
-      width: 100%;
-      height: 400px;
-    }
     .back-link {
       text-decoration: none;
       color: #fff;
       background: #00695c;
       padding: 10px 20px;
       border-radius: 5px;
+    }
+    .medium-card {
+      border: 1px solid #ccc;
+      border-left: 5px solid #00ab6c;
+      border-radius: 8px;
+      padding: 20px;
+      background: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+    .medium-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .medium-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .medium-card h3 {
+      margin: 0 0 10px;
+      color: #00ab6c;
+    }
+    .medium-card p {
+      margin: 0;
     }
   </style>
 </head>
@@ -44,26 +60,30 @@
   <!-- Project Title -->
   <div class="section">
     <h1>🌍 Global TB Insights</h1>
-    <p>This data story explores global Tuberculosis trends—covering prevalence, incidence, and mortality rates. Based on WHO data, it breaks down regional patterns and highlights progress over time. It also complements the GitHub dashboard with a detailed Medium article.</p>
+    <p>This data story explores global Tuberculosis trends—covering prevalence, incidence, and mortality rates. Based on WHO data, it breaks down regional patterns and highlights progress over time.</p>
   </div>
 
-  <!-- Medium Article Embed -->
+  <!-- Medium Link Styled as Embed -->
   <div class="section">
     <h2>📝 Full Story on Medium</h2>
-    <p><a href="https://medium.com/@kalyandangi/global-tuberculosis-statistics-prevalence-mortality-and-incidence-analysis-12d96abadbf0" target="_blank">📖 Read: Global Tuberculosis Statistics (Prevalence, Mortality, and Incidence Analysis)</a></p>
-    <iframe src="https://medium.com/media/12d96abadbf0/embed" allowfullscreen></iframe>
+    <div class="medium-card">
+      <a href="https://medium.com/@kalyandangi/global-tuberculosis-statistics-prevalence-mortality-and-incidence-analysis-12d96abadbf0" target="_blank">
+        <h3>Global Tuberculosis Statistics: Prevalence, Mortality, and Incidence Analysis</h3>
+        <p>Published on Medium by Kalyan Dangi — An in-depth analysis of WHO TB data with visual insights and global health implications.</p>
+      </a>
+    </div>
   </div>
 
-  <!-- GitHub Repo -->
+  <!-- GitHub Link -->
   <div class="section">
-    <h2>📁 Explore Code & Visuals</h2>
+    <h2>📁 Explore Code & Dashboard</h2>
     <p><a href="https://github.com/YourGitHubUsername/global-tuberculosis-insight" target="_blank">🔗 View Project on GitHub</a></p>
   </div>
 
   <!-- Final Note -->
   <div class="section">
-    <h2>🔍 Summary</h2>
-    <p>The project highlights regional disparities, the burden of TB among HIV-positive populations, and mortality estimation ranges. It also demonstrates strong data storytelling and Power BI dashboarding skills.</p>
+    <h2>🧠 Final Thoughts</h2>
+    <p>This project showcases my ability to explore complex global health data and communicate insights through clear storytelling, dashboards, and supporting articles.</p>
   </div>
 
 </body>
