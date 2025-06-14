@@ -71,37 +71,24 @@
 
   <!-- Interactive Visualization -->
   <div class="section">
-    <h2>📈 Sample Visualization</h2>
-    <p>Here’s a simulated line chart showing taxi demand by hour of the day:</p>
-    <div id="taxiDemandChart" class="chart-container"></div>
-    <script>
-      const hours = [...Array(24).keys()];
-      const pickups = hours.map(h => Math.round(50 + 100 * Math.sin((h + 4) * Math.PI / 12)));
+    <h2>📊 Data Visualization & Storytelling Report</h2>
+<p>
+  This report provides key insights derived from our NYC data analysis, including visualizations, analytical summaries, and interpretive storytelling elements. Use the embedded viewer below to explore the document.
+</p>
 
-      Plotly.newPlot('taxiDemandChart', [{
-        x: hours,
-        y: pickups,
-        type: 'scatter',
-        mode: 'lines+markers',
-        marker: { color: '#1a73e8' },
-        line: { shape: 'spline' }
-      }], {
-        title: 'Hourly Taxi Demand (Simulated)',
-        xaxis: { title: 'Hour of Day (0–23)' },
-        yaxis: { title: 'Pickup Count' }
-      });
-    </script>
-
-    <!-- PDF Viewer -->
-    <h3>📄 PDF Document (abc.pdf)</h3>
-    <iframe src="Report NYC.pdf"></iframe>
+<div style="border: 2px solid #ccc; border-radius: 10px; padding: 10px; background: #f9f9f9;">
+  <iframe 
+    src="Report NYC.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+    width="100%" 
+    height="700px" 
+    style="border: none; border-radius: 8px;">
+  </iframe>
+  <div style="margin-top: 10px; text-align: center;">
+    <a href="Report NYC.pdf" download style="text-decoration: none; font-weight: bold; color: #007acc;">
+      ⬇️ Download Full Report (PDF)
+    </a>
   </div>
-
-  <!-- GitHub and Dataset -->
-  <div class="section">
-    <h2>📁 Resources</h2>
-    <p><a href="https://github.com/johndoe/nyc-taxi-dashboard" target="_blank">🔗 View Full Code on GitHub</a></p>
-    <p><a href="https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page" target="_blank">📂 Dataset Source: NYC TLC</a></p>
+</div>
   </div>
 
   <!-- Final Note -->
