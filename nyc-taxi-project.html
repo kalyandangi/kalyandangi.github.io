@@ -13,28 +13,52 @@
       padding: 30px;
       color: #333;
     }
+
     h1, h2 {
       color: #1a73e8;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
     }
-    p {
-      line-height: 1.6;
+
+    h2:hover {
+      color: #0c47a1;
     }
+
+    p, ul {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
     .section {
-      margin-bottom: 50px;
+      background: #fff;
+      padding: 25px 30px;
+      margin-bottom: 40px;
+      border-left: 5px solid #1a73e8;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
     iframe {
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       width: 100%;
       height: 400px;
     }
+
     .back-link {
       text-decoration: none;
       color: #fff;
       background: #1a73e8;
       padding: 10px 20px;
       border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 20px;
     }
+
     .chart-container {
       width: 100%;
       margin-top: 30px;
@@ -48,54 +72,151 @@
 
   <!-- Project Title -->
   <div class="section">
-    <h1>🚖 NYC Taxi Dashboard</h1>
-    <p>This Power BI dashboard explores over 10 million taxi trips in NYC during January 2015, focusing on trip duration, pickup/dropoff trends, weather impacts, and flight correlations. The goal is to make data-driven decisions easy through clear storytelling.</p>
+    <h2>🚖 NYC Taxi Dashboard</h2>
+    <p>
+      This section explores key trends from the NYC Yellow, Green, and For-Hire Vehicle (FHV) taxi datasets 
+      for January 2015. I analyze demand across boroughs, fare structures, peak hours, and most traveled 
+      zones, helping us understand commuter behavior and urban mobility patterns.
+    </p> 
   </div>
 
   <!-- Demo Video -->
   <div class="section">
-    <h2>📺 Demo Walkthrough</h2>
+    <h2>🎥 Demo Walkthrough</h2>
     <iframe src="https://www.youtube.com/embed/bf2-FDx4Bpo?si=A2waad-piIVHjmGH" allowfullscreen></iframe>
   </div>
 
-  <!-- Data Storytelling -->
+  <!-- Key Insights -->
   <div class="section">
-    <h2>📊 Key Insights</h2>
-    <ul>
-      <li><strong>Peak Demand Hours:</strong> Most taxi pickups occur between 5 PM and 8 PM.</li>
-      <li><strong>Weather Impact:</strong> Rainy days saw a 20% increase in taxi usage.</li>
-      <li><strong>Airport Demand:</strong> JFK and LaGuardia locations consistently have high drop-off rates.</li>
-      <li><strong>Day-wise Analysis:</strong> Saturdays show the longest average trip durations.</li>
-    </ul>
+    <h2>💡 Key Insights</h2>
+    <p>
+      • Manhattan had the highest yellow taxi usage, accounting for over 92% of total trips.<br>
+      • Midtown Center was the top pickup location for FHVs.<br>
+      • Friday saw the highest taxi and flight activity, indicating weekly travel peaks.<br>
+      • The average fare for green taxis was $11.77 and for yellow taxis around $82.53 in some high-fare zones.<br>
+      • Weather conditions significantly impacted trip durations and delays, with colder days showing reduced mobility.
+    </p>
   </div>
 
-  <!-- Interactive Visualization -->
+  <!-- New Storytelling Sections -->
   <div class="section">
-  <h2>📘 NYC Data Analytics & Insights Report</h2>
-<p>
-  Dive into our comprehensive analysis of New York City's transportation, weather, and flight data from January 2015. 
-  This report weaves together data visualizations and narrative insights to uncover patterns, highlight challenges, 
-  and tell the story of how the city moved, adapted, and responded during a single transformative month.
-</p>
-
-<p>
-  Explore trends in taxi demand by borough, analyze the relationship between weather conditions and travel behavior, 
-  and gain insights into daily flight activities. The report is structured to guide you through key questions, 
-  backed by clear visuals and thoughtful interpretations.
-</p>
-
-<iframe 
-  src="Report NYC.pdf#toolbar=0&navpanes=0&scrollbar=1" 
-  width="100%" 
-  height="720px" 
-  style="margin-top: 20px;">
-</iframe>
+    <h2>🗺️ Borough-Level Analysis</h2>
+    <p>
+      This section focuses on how taxi demand and fare patterns vary across NYC boroughs. 
+      Manhattan consistently leads in taxi usage, with over 92% of yellow taxi trips. In contrast, Staten Island 
+      sees minimal demand. For-Hire Vehicle (FHV) data shows Midtown Center as the most active pickup zone. 
+      The analysis also reveals fare disparities, with neighborhoods like Charleston/Tootenville showing the 
+      highest average fares.
+    </p>
   </div>
 
-  <!-- Final Note -->
+  <div class="section">
+    <h2>📆 Weekday vs Weekend Behavior</h2>
+    <p>
+      Travel behavior shifts significantly between weekdays and weekends. Data shows Friday as the busiest 
+      day for both flights and taxis, with weekday mornings seeing higher average fares. Yellow taxi demand 
+      peaks early mornings, while FHV demand increases on weekends. Week 5’s Friday alone accounts for 
+      6.32% of green taxi demand. Weekend activity is more evenly distributed among boroughs.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🌡️ Weather Impact</h2>
+    <p>
+      Weather conditions had a measurable impact on NYC's mobility. As temperatures dropped from Jan 1 to Jan 31, 
+      both minimum and maximum temperatures showed steep declines. Temperature variance between “feels like” 
+      and actual temperatures was highest around 2 AM. The coldest days saw reduced taxi demand and 
+      increased flight delays, suggesting weather was a significant disruptor.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>✈️ Flight Delay & Cancellation Trends</h2>
+    <p>
+      The analysis revealed that flight delays and cancellations peaked on Mondays, while Fridays had the fewest. 
+      Southwest Airlines had the highest number of delays (42,195), and Dallas/Fort Worth Airport experienced the 
+      most cancellations (3,578). Delay patterns align with weather and weekday behavior, while cancellations 
+      diverged most during January. A noticeable gap between delays and cancellations highlights complex 
+      operational dynamics in NYC airports.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🧪 Hypothesis Testing</h2>
+    <p>
+      Several hypotheses were tested to better understand correlations. For instance, we found:
+      <ul>
+        <li>Flight delays increase when weather is "snow" or "rain."</li>
+        <li>Taxi fares are marginally higher on weekends, especially during peak evening hours.</li>
+        <li>Arrival and departure delays are positively correlated, indicating cascading schedule effects.</li>
+      </ul>
+      These insights were explored using filters across airline, weather condition, and date dimensions in Power BI.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>📊 Anomaly Detection</h2>
+    <p>
+      This section highlights unusual values and outliers:
+      <ul>
+        <li>🚖 Max fare: $4,008 (Yellow Taxi)</li>
+        <li>🕒 Max trip duration: 549,000 minutes</li>
+        <li>🌡️ Coldest temperature: -16.5°C | Feels like: -27.1°C</li>
+        <li>🛫 Min flight distance: 31 miles | Min arrival delay: -82 mins</li>
+      </ul>
+      Anomaly flags helped uncover errors, extreme use cases, and data quality concerns, particularly in FHV datasets.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🔗 How It’s Connected</h2>
+    <p>
+      This project brings together three distinct datasets: taxi trips, weather, and flight operations. 
+      Relationships were established via date, location IDs, and weather conditions to allow cross-domain analysis. 
+      For example:
+      <ul>
+        <li>Taxi pickup dates align with weather data to assess weather impacts on demand.</li>
+        <li>Flight delays are analyzed against airport origin and daily weather.</li>
+        <li>FHV trip data includes weather joins for contextual analysis despite missing drop-off details.</li>
+      </ul>
+      These connections enable a rich, narrative-driven exploration of how transportation systems interact with 
+      environmental and temporal factors in a major urban setting.
+    </p>
+  </div>
+
+  <!-- PDF Report -->
+  <div class="section">
+    <h2>📘 NYC Data Analytics & Insights Report</h2>
+    <p>
+      Dive into our comprehensive analysis of New York City's transportation, weather, and flight data from January 2015. 
+      This report weaves together data visualizations and narrative insights to uncover patterns, highlight challenges, 
+      and tell the story of how the city moved, adapted, and responded during a single transformative month.
+    </p>
+
+    <p>
+      The report below combines travel, weather, and flight data to provide a holistic view of NYC's movement 
+      ecosystem during January 2015. Data transformations, model relationships, DAX measures, and calculated columns 
+      were created to extract meaningful patterns, which are visualized across 12 Power BI dashboards.
+    </p>
+
+    <iframe 
+      src="Report NYC.pdf#toolbar=0&navpanes=0&scrollbar=1" 
+      width="100%" 
+      height="720px" 
+      style="margin-top: 20px;">
+    </iframe>
+  </div>
+
+  <!-- Final Thoughts -->
   <div class="section">
     <h2>🧠 Final Thoughts</h2>
-    <p>This dashboard helped uncover meaningful taxi usage patterns and how they align with NYC weather, airport traffic, and weekends. It showcases my ability to clean, analyze, and present real-world datasets interactively.</p>
+    <p>
+      This project demonstrates the power of <strong>data integration</strong> and <strong>visual storytelling</strong> using Power BI. 
+      Tools used include Excel for preprocessing, DAX for modeling, and Power BI for dynamic dashboard creation.
+      The process involved cleaning multiple large datasets, establishing relationships between them, and crafting
+      intuitive visualizations to guide user understanding. The result is a rich, narrative-driven analytical product
+      that offers both depth and clarity.
+    </p>
   </div>
 
 </body>
