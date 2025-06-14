@@ -1,362 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Global TB Insights | Kalyan Dangi</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <title>Global TB Insights | Kalyan Dangi</title>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
       color: #333;
-      scroll-behavior: smooth;
-    }
-    h1, h2 {
-      color: #00695c;
-      margin-bottom: 0.3em;
-    }
-    p {
       line-height: 1.6;
     }
-    a.back-link {
-      display: inline-block;
-      margin-bottom: 25px;
-      text-decoration: none;
-      color: #fff;
-      background: #00695c;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    a.back-link:hover {
-      background: #004d40;
-    }
-
-    /* Section styling */
-    section {
-      background: #fff;
-      padding: 20px 25px;
-      margin-bottom: 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.08);
-      opacity: 0;
-      transform: translateY(30px);
-      animation-fill-mode: forwards;
-    }
-    section.visible {
-      animation: fadeUp 0.6s ease forwards;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Medium Card */
-    .medium-card {
-      border: 1px solid #ccc;
-      border-left: 5px solid #00ab6c;
-      border-radius: 8px;
-      padding: 20px;
-      background: #fff;
-      cursor: pointer;
-      transition: box-shadow 0.3s ease;
-    }
-    .medium-card:hover {
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    }
-    .medium-card a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .medium-card h3 {
-      margin: 0 0 10px;
-      color: #00ab6c;
-    }
-    .medium-card p {
-      margin: 0;
-    }
-
-    /* Toggle button */
-    .toggle-btn {
-      background: #00695c;
+    header {
+      background: #005d57;
       color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 600;
-      margin-top: 10px;
-      transition: background 0.3s ease;
-      user-select: none;
+      padding: 2rem;
+      text-align: center;
     }
-    .toggle-btn:hover {
-      background: #004d40;
-    }
-
-    /* Collapsible content */
-    .collapsible-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-      margin-top: 15px;
-    }
-    .collapsible-content.open {
-      max-height: 1000px; /* large enough for content */
-    }
-
-    /* Chart containers */
-    .chart {
-      width: 100%;
-      height: 350px;
-      margin-top: 15px;
-      border-radius: 8px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      body {
-        padding: 20px 10px;
-      }
-      .chart {
-        height: 250px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <a class="back-link" href="index.html">← Back to Portfolio</a>
-
-  <section id="intro" class="visible">
-    <h1>🌍 Global TB Insights</h1>
-    <p>This data story explores global Tuberculosis trends—covering prevalence, incidence, and mortality rates. Based on WHO data, it breaks down regional patterns and highlights progress over time.</p>
-  </section>
-
-  <section id="medium-story" class="visible">
-    <h2>📝 Full Story on Medium</h2>
-    <div class="medium-card" tabindex="0" role="button" aria-expanded="false" aria-controls="medium-desc" aria-label="Toggle Medium story details">
-      <a href="https://medium.com/@kalyandangi/global-tuberculosis-statistics-prevalence-mortality-and-incidence-analysis-12d96abadbf0" target="_blank" rel="noopener noreferrer">
-        <h3>Global Tuberculosis Statistics: Prevalence, Mortality, and Incidence Analysis</h3>
-        <p>Published on Medium by Kalyan Dangi — An in-depth analysis of WHO TB data with visual insights and global health implications.</p>
-      </a>
-    </div>
-  </section>
-
-  <section id="github" class="visible">
-    <h2>📁 Explore Code & Dashboard</h2>
-    <p>
-      <a href="https://github.com/YourGitHubUsername/global-tuberculosis-insight" target="_blank" rel="noopener noreferrer" style="color:#00695c; font-weight:600; text-decoration: underline;">
-        🔗 View Project on GitHub
-      </a>
-    </p>
-  </section>
-
-  <section id="charts" class="visible">
-    <h2>📊 TB Data Visualizations</h2>
-
-    <button class="toggle-btn" aria-expanded="false" aria-controls="chart-prevalence">Toggle Prevalence Chart</button>
-    <div id="chart-prevalence" class="collapsible-content" aria-hidden="true">
-      <div id="prevalence-chart" class="chart"></div>
-    </div>
-
-    <button class="toggle-btn" aria-expanded="false" aria-controls="chart-mortality">Toggle Mortality Chart</button>
-    <div id="chart-mortality" class="collapsible-content" aria-hidden="true">
-      <div id="mortality-chart" class="chart"></div>
-    </div>
-
-    <button class="toggle-btn" aria-expanded="false" aria-controls="chart-incidence">Toggle Incidence Chart</button>
-    <div id="chart-incidence" class="collapsible-content" aria-hidden="true">
-      <div id="incidence-chart" class="chart"></div>
-    </div>
-  </section>
-
-  <section id="final-thoughts" class="visible">
-    <h2>🧠 Final Thoughts</h2>
-    <p>This project showcases my ability to explore complex global health data and communicate insights through clear storytelling, dashboards, and supporting articles.</p>
-  </section>
-
-  <script>
-    // Fade-in animation on scroll (for any future dynamic content)
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold: 0.2});
-    sections.forEach(section => observer.observe(section));
-
-    // Collapsible toggles for charts
-    const toggleButtons = document.querySelectorAll('.toggle-btn');
-    toggleButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('aria-controls');
-        const content = document.getElementById(targetId);
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-
-        btn.setAttribute('aria-expanded', !expanded);
-        content.classList.toggle('open');
-        content.setAttribute('aria-hidden', expanded);
-      });
-    });
-
-    // Sample dummy data for charts - replace with your real data
-    const prevalenceData = {
-      x: ['Africa', 'Asia', 'Europe', 'Americas', 'Oceania'],
-      y: [250, 170, 30, 50, 5],
-      type: 'bar',
-      marker: { color: '#00796b' }
-    };
-    const mortalityData = {
-      labels: ['HIV+ TB', 'Non-HIV TB'],
-      values: [45, 155],
-      type: 'pie',
-      marker: {
-        colors: ['#004d40', '#00796b']
-      }
-    };
-    const incidenceData = {
-      x: ['2016', '2017', '2018', '2019', '2020'],
-      y: [10, 9.5, 9, 8.7, 8.3],
-      type: 'scatter',
-      mode: 'lines+markers',
-      line: { color: '#004d40' },
-      fill: 'tozeroy',
-      fillcolor: 'rgba(0, 77, 64, 0.3)'
-    };
-
-    // Initialize charts only when their container is expanded
-    function initChart(id, data, layout = {}) {
-      Plotly.newPlot(id, [data], {
-        margin: { t: 30, b: 40 },
-        ...layout
-      });
-    }
-
-    // Lazy init charts on toggle open
-    toggleButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('aria-controls');
-        if(document.getElementById(targetId).classList.contains('open')) {
-          switch(targetId) {
-            case 'chart-prevalence':
-              if(!document.getElementById('prevalence-chart').hasChildNodes()) {
-                initChart('prevalence-chart', prevalenceData, {title: 'TB Prevalence by Region (per 100,000)'});
-              }
-              break;
-            case 'chart-mortality':
-              if(!document.getElementById('mortality-chart').hasChildNodes()) {
-                initChart('mortality-chart', mortalityData, {title: 'TB Mortality Distribution'});
-              }
-              break;
-            case 'chart-incidence':
-              if(!document.getElementById('incidence-chart').hasChildNodes()) {
-                initChart('incidence-chart', incidenceData, {title: 'TB Incidence Over Years', yaxis: {title: 'Incidence Rate'}});
-              }
-              break;
-          }
-        }
-      });
-    });
-  </script>
-</body>
-</html>
-
-      background: #f9f9f9;
+    section {
       max-width: 1000px;
       margin: auto;
-      padding: 30px;
-      color: #333;
+      padding: 2rem;
     }
-    h1, h2 {
-      color: #00695c;
+    h1, h2, h3 {
+      color: #005d57;
     }
-    p {
-      line-height: 1.6;
-    }
-    .section {
-      margin-bottom: 50px;
-    }
-    .back-link {
+    a {
+      color: #007BFF;
       text-decoration: none;
-      color: #fff;
-      background: #00695c;
-      padding: 10px 20px;
-      border-radius: 5px;
     }
-    .medium-card {
-      border: 1px solid #ccc;
-      border-left: 5px solid #00ab6c;
-      border-radius: 8px;
-      padding: 20px;
-      background: #fff;
-      transition: box-shadow 0.3s ease;
+    a:hover {
+      text-decoration: underline;
     }
-    .medium-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .medium-card a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .medium-card h3 {
-      margin: 0 0 10px;
-      color: #00ab6c;
-    }
-    .medium-card p {
-      margin: 0;
+    .highlight {
+      background-color: #e8f5e9;
+      padding: 0.5rem 1rem;
+      border-left: 5px solid #4caf50;
+      margin: 1rem 0;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Global Tuberculosis Statistics Dashboard</h1>
+    <p>Prevalence, Mortality, and Incidence Analysis (1990–2015)</p>
+  </header>
 
-  <!-- Navigation -->
-  <a class="back-link" href="index.html">← Back to Portfolio</a>
+  <section>
+    <h2>🔗 Project Link</h2>
+    <p>Explore the full project and insights on Medium:</p>
+    <p><a href="https://medium.com/@kalyandangi/global-tuberculosis-statistics-prevalence-mortality-and-incidence-analysis-12d96abadbf0" target="_blank">Read Full Report on Medium →</a></p>
 
-  <!-- Project Title -->
-  <div class="section">
-    <h1>🌍 Global TB Insights</h1>
-    <p>This data story explores global Tuberculosis trends—covering prevalence, incidence, and mortality rates. Based on WHO data, it breaks down regional patterns and highlights progress over time.</p>
-  </div>
+    <h2>📌 Project Overview</h2>
+    <p>This interactive dashboard explores the global burden of tuberculosis (TB) between 1990 and 2015. Built using <strong>Power BI</strong>, the dashboard presents a visual and analytical breakdown of TB's prevalence, incidence, and mortality across different world regions and countries.</p>
 
-  <!-- Medium Link Styled as Embed -->
-  <div class="section">
-    <h2>📝 Full Story on Medium</h2>
-    <div class="medium-card">
-      <a href="https://medium.com/@kalyandangi/global-tuberculosis-statistics-prevalence-mortality-and-incidence-analysis-12d96abadbf0" target="_blank">
-        <h3>Global Tuberculosis Statistics: Prevalence, Mortality, and Incidence Analysis</h3>
-        <p>Published on Medium by Kalyan Dangi — An in-depth analysis of WHO TB data with visual insights and global health implications.</p>
-      </a>
+    <h3>🗂 Data Source</h3>
+    <p>The dataset was sourced from the <strong>World Health Organization (WHO)</strong>, specifically from the “Tuberculosis Burden by Country” report. It includes estimated statistics for:</p>
+    <ul>
+      <li>Total Population</li>
+      <li>TB Prevalence</li>
+      <li>TB Mortality</li>
+      <li>TB Incidence</li>
+    </ul>
+
+    <h3>🧠 Key Insights & Findings</h3>
+    <div class="highlight">
+      <strong>Global Totals (1990–2013):</strong>  
+      <ul>
+        <li><strong>Total Population:</strong> 149 Billion</li>
+        <li><strong>TB Prevalence:</strong> 340.7 Million</li>
+        <li><strong>TB Deaths:</strong> 44.35 Million</li>
+        <li><strong>Incident Cases:</strong> 216 Million</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- GitHub Link -->
-  <div class="section">
-    <h2>📁 Explore Code & Dashboard</h2>
-    <p><a href="https://github.com/YourGitHubUsername/global-tuberculosis-insight" target="_blank">🔗 View Project on GitHub</a></p>
-  </div>
+    <ul>
+      <li><strong>India</strong> consistently leads in TB prevalence and TB-related deaths.</li>
+      <li>About <strong>20.76%</strong> of TB deaths are HIV-related.</li>
+      <li>Average TB detection rate is highest in Europe (79%), and lowest in Africa (51%).</li>
+      <li>In 2013 alone: 7B population, 11.4M TB prevalence, 1.43M deaths, 8.96M incidents.</li>
+    </ul>
 
-  <!-- Final Note -->
-  <div class="section">
-    <h2>🧠 Final Thoughts</h2>
-    <p>This project showcases my ability to explore complex global health data and communicate insights through clear storytelling, dashboards, and supporting articles.</p>
-  </div>
+    <h2>📊 Dashboard Pages</h2>
+    <h3>1. Global Overview</h3>
+    <ul>
+      <li>Cards showing total prevalence, deaths, incidents</li>
+      <li>Donut chart of TB deaths by HIV status</li>
+      <li>Map with hover-over country-level death data</li>
+      <li>Year/country/region slicers for dynamic filtering</li>
+    </ul>
 
+    <h3>2. TB Prevalence</h3>
+    <ul>
+      <li>Funnel chart: 92.97% of prevalence data is predicted</li>
+      <li>Line chart compares high vs low bounds</li>
+      <li>Pie chart: AFR = 43% of global prevalence</li>
+    </ul>
+
+    <h3>3. TB Incidence</h3>
+    <ul>
+      <li>South Africa leads with 4M HIV-positive TB cases</li>
+      <li>Top incidence methods: High income estimation, mortality estimation</li>
+      <li>89.71% non-HIV TB; 10.29% HIV-positive</li>
+    </ul>
+
+    <h3>4. TB Death</h3>
+    <ul>
+      <li>Peak TB deaths in 2001: 2.1M</li>
+      <li>Majority from non-HIV TB (63.04%)</li>
+      <li>Swaziland and Zimbabwe: highest HIV in TB incident rates</li>
+    </ul>
+
+    <h3>5. Summary Page</h3>
+    <ul>
+      <li>Max case detection rate in 1995 (320%)</li>
+      <li>TB Prevalence: 0.23% | Incidents: 0.14% | Deaths: 0.03%</li>
+      <li>TB metrics by country per 100k population</li>
+    </ul>
+
+    <h2>🌍 Observations</h2>
+    <ul>
+      <li>TB burden is highest in low-income and HIV-affected countries.</li>
+      <li>Strong regional disparities in detection and mortality rates.</li>
+      <li>Steady decline in TB deaths post-2001 due to interventions.</li>
+    </ul>
+
+    <h2>✅ Skills Demonstrated</h2>
+    <ul>
+      <li>Data cleaning & transformation</li>
+      <li>Multi-page dashboard development in Power BI</li>
+      <li>Storytelling using interactive visuals</li>
+      <li>Regional comparisons & trend analysis</li>
+    </ul>
+
+    <p><em>© 2025 | Project by Kalyan Dangi | Data Source: World Health Organization (WHO)</em></p>
+  </section>
 </body>
 </html>
