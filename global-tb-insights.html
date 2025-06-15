@@ -12,12 +12,25 @@
       color: #333;
       line-height: 1.6;
     }
-    header {
-      background: #005d57;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+  .back-link {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+header {
+  background: #005d57;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
     section {
       max-width: 1000px;
       margin: auto;
@@ -41,9 +54,9 @@
     }
   </style>
 </head>
-<body>
-  <a class="back-link" href="index.html">← Back to Portfolio</a>
+<body
   <header>
+    <a class="back-link" href="index.html">← Back to Portfolio</a>
     <h1>Global Tuberculosis Statistics Dashboard</h1>
     <p>Prevalence, Mortality, and Incidence Analysis (1990–2015)</p>
   </header>
