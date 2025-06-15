@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>NYC Travel Insights 2015 | Kalyan Dangi</title>
+  <title>Global TB Insights | Kalyan Dangi</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -42,134 +42,106 @@
   </style>
 </head>
 <body>
-
   <header>
-    <h1>NYC Travel Insights Dashboard</h1>
-    <p>Taxi, Flights, and Weather Analysis – January 2015</p>
+    <h1>Global Tuberculosis Statistics Dashboard</h1>
+    <p>Prevalence, Mortality, and Incidence Analysis (1990–2015)</p>
   </header>
 
   <section>
-    <h2>🔗 Project Files</h2>
-    <p><a href="KalyanDangi.pdf" target="_blank">📄 Project Report PDF →</a></p>
-    <p><a href="KalyanDangiviz.pdf" target="_blank">📊 Visualizations PDF →</a></p>
-    <p><a href="https://www.youtube.com/watch?v=your_video_id" target="_blank">🎥 YouTube Demo →</a></p>
+    <h2>🔗 Project Link</h2>
+    <p>Explore the full project and insights</p>
+    <p><a href="https://medium.com/@kalyandangi/global-tuberculosis-statistics-prevalence-mortality-and-incidence-analysis-12d96abadbf0" target="_blank">Read Full Report on Medium →</a></p>
+    <p><a href="https://github.com/kalyandangi/global-tb-analysis" target="_blank">Read Full Project on Github →</a></p>
 
     <h2>📌 Project Overview</h2>
-    <p>This dashboard analyzes transportation and weather activity across New York City in January 2015. Built in <strong>Power BI</strong>, it features 12 pages exploring taxi usage, flight delays, trip duration, and temperature patterns through interactive visuals.</p>
+    <p>This interactive dashboard explores the global burden of tuberculosis (TB) between 1990 and 2015. Built using <strong>Power BI</strong>, the dashboard presents a visual and analytical breakdown of TB's prevalence, incidence, and mortality across different world regions and countries.</p>
 
-    <h3>🗂 Dataset Sources</h3>
+    <h3>🗂 Data Source</h3>
+    <p>The dataset was sourced from the <strong>World Health Organization (WHO)</strong>, specifically from the “Tuberculosis Burden by Country” report. It includes estimated statistics for:</p>
     <ul>
-      <li>NYC Taxi Trip Data (Green, Yellow, FHV – Jan 2015)</li>
-      <li>NYC Weather Data – Hourly and Daily (2015)</li>
-      <li>U.S. Domestic Flights (2015)</li>
+      <li>Total Population</li>
+      <li>TB Prevalence</li>
+      <li>TB Mortality</li>
+      <li>TB Incidence</li>
     </ul>
 
-    <h2>📊 Dashboard Pages</h2>
-
-    <h3>1. Green Taxi Travel</h3>
-    <ul>
-      <li>Astoria: most common destination (44,530 trips)</li>
-      <li>Average Fare: $11.77</li>
-      <li>Week 5 had highest weekday demand</li>
-    </ul>
-
-    <h3>2. Yellow Taxi Travel</h3>
-    <ul>
-      <li>Manhattan had 92.98% of usage (11.6M trips)</li>
-      <li>Highest fare: Murray Hill ($4,008)</li>
-      <li>Peak avg fare hour: 5 AM ($15.7)</li>
-    </ul>
-
-    <h3>3. For-Hire Vehicle Travel (FHV)</h3>
-    <ul>
-      <li>Top zone: Midtown Center (62,069 pickups)</li>
-      <li>Data lacks fare and drop-off info</li>
-      <li>Friday’s busiest pickup borough: Manhattan</li>
-    </ul>
-
-    <h3>4. NYC Taxi Overview</h3>
-    <ul>
-      <li>Least demand: Staten Island (415 trips)</li>
-      <li>Monday had highest average fare ($38)</li>
-      <li>Manhattan had longest total duration (150M mins)</li>
-    </ul>
-
-    <h3>5. NYC Weather Overview</h3>
-    <ul>
-      <li>Min temp: -16.5°C, Feels-like: -27.1°C</li>
-      <li>Max temp: 9°C | Daily avg: 13.57°C</li>
-      <li>Temp variance highest at 2 AM (4°C)</li>
-    </ul>
-
-    <h3>6. NYC Flights Info</h3>
-    <ul>
-      <li>Southwest Airlines: most delays (42K)</li>
-      <li>Top cancelled: Dallas/Fort Worth (3.6K)</li>
-      <li>Monday had most cancellations (9.8K)</li>
-    </ul>
-
-    <h3>7. Data Anomaly Centre</h3>
+    <h3>🧠 Key Insights & Findings</h3>
     <div class="highlight">
+      <strong>Global Totals (1990–2013):</strong>  
       <ul>
-        <li>Max Fare: $4,008 | Max Trip Distance: 15.42M</li>
-        <li>Max Trip Duration: 549K mins</li>
-        <li>Flights: 1.049M | Min Delay: -82 mins</li>
+        <li><strong>Total Population:</strong> 149 Billion</li>
+        <li><strong>TB Prevalence:</strong> 340.7 Million</li>
+        <li><strong>TB Deaths:</strong> 44.35 Million</li>
+        <li><strong>Incident Cases:</strong> 216 Million</li>
       </ul>
     </div>
 
-    <h3>8. Summary Statistics</h3>
     <ul>
-      <li>Yellow Taxi Fare Avg: $11.90 | Max: $4,008</li>
-      <li>Temp Avg: 13.57°C | Max: 31.1°C</li>
-      <li>Flight Delay Total: 7.65M | Cancellation: 1.04M</li>
+      <li><strong>India</strong> consistently leads in TB prevalence and TB-related deaths.</li>
+      <li>About <strong>20.76%</strong> of TB deaths are HIV-related.</li>
+      <li>Average TB detection rate is highest in Europe (79%), and lowest in Africa (51%).</li>
+      <li>In 2013 alone: 7B population, 11.4M TB prevalence, 1.43M deaths, 8.96M incidents.</li>
     </ul>
 
-    <h3>9. Comparison Centre</h3>
+    <h2>📊 Dashboard Pages</h2>
+    <h3>1. Global Overview</h3>
+    <img class="responsive" src="https://github.com/kalyandangi/global-tb-analysis/blob/main/visuals/global%20tuberclosis%20overview.png?raw=true" alt="Global TB Overview Chart">
     <ul>
-      <li>Saturday demand higher than Sunday</li>
-      <li>Week 2 saw widest Sat/Sun difference</li>
-      <li>FHV and Green Taxi: positively correlated</li>
+      <li>Cards showing total prevalence, deaths, incidents</li>
+      <li>Donut chart of TB deaths by HIV status</li>
+      <li>Map with hover-over country-level death data</li>
+      <li>Year/country/region slicers for dynamic filtering</li>
     </ul>
 
-    <h3>10. Analytics Dashboard</h3>
+    <h3>2. TB Prevalence</h3>
+     <img class="responsive" src="https://github.com/kalyandangi/global-tb-analysis/blob/main/visuals/tuberculosis%20prevalence.png?raw=true" alt="TB Prevalence Chart">
     <ul>
-      <li>Arrival and departure delays: positively correlated</li>
-      <li>Delay counts tracked daily across Jan 1–31</li>
+      <li>Funnel chart: 92.97% of prevalence data is predicted</li>
+      <li>Line chart compares high vs low bounds</li>
+      <li>Pie chart: AFR = 43% of global prevalence</li>
     </ul>
 
-    <h3>11. Hypothesis Centre</h3>
+    <h3>3. TB Incidence</h3>
+    
+     <img class="responsive" src="https://github.com/kalyandangi/global-tb-analysis/blob/main/visuals/tuberculosis%20incidence.png?raw=true" alt="TB Incidence Chart">
     <ul>
-      <li>Flight delays increase under bad weather</li>
-      <li>Filters for airline, month, and weather conditions</li>
+      <li>South Africa leads with 4M HIV-positive TB cases</li>
+      <li>Top incidence methods: High income estimation, mortality estimation</li>
+      <li>89.71% non-HIV TB; 10.29% HIV-positive</li>
     </ul>
 
-    <h3>12. My Story</h3>
+    <h3>4. TB Death</h3>
+    <img class="responsive" src="https://github.com/kalyandangi/global-tb-analysis/blob/main/visuals/tuberculosis%20death.png?raw=true" alt="TB Death Chart">
     <ul>
-      <li>Friday: peak day for taxi and flight demand</li>
-      <li>Manhattan had highest taxi use; EWR the lowest</li>
-      <li>Thursday: 10.8% of flights in cloudy weather</li>
+      <li>Peak TB deaths in 2001: 2.1M</li>
+      <li>Majority from non-HIV TB (63.04%)</li>
+      <li>Swaziland and Zimbabwe: highest HIV in TB incident rates</li>
     </ul>
 
-    <h2>🌐 Observations</h2>
+    <h3>5. Summary Page</h3>
+    <img class="responsive" src="https://github.com/kalyandangi/global-tb-analysis/blob/main/visuals/summary.png?raw=true" alt="Summary Chart">
     <ul>
-      <li>Taxi demand surges on weekends and in central boroughs</li>
-      <li>Weather influences fare and trip durations</li>
-      <li>Flight delays are consistent across major carriers</li>
+      <li>Max case detection rate in 1995 (320%)</li>
+      <li>TB Prevalence: 0.23% | Incidents: 0.14% | Deaths: 0.03%</li>
+      <li>TB metrics by country per 100k population</li>
+    </ul>
+
+    <h2>🌍 Observations</h2>
+    <ul>
+      <li>TB burden is highest in low-income and HIV-affected countries.</li>
+      <li>Strong regional disparities in detection and mortality rates.</li>
+      <li>Steady decline in TB deaths post-2001 due to interventions.</li>
     </ul>
 
     <h2>✅ Skills Demonstrated</h2>
     <ul>
-      <li>Data transformation in Power BI (DAX, measures)</li>
-      <li>Multi-page dashboard design</li>
-      <li>Combining multiple data sources (Taxi, Flights, Weather)</li>
-      <li>Insight storytelling through charts</li>
+      <li>Data cleaning & transformation</li>
+      <li>Multi-page dashboard development in Power BI</li>
+      <li>Storytelling using interactive visuals</li>
+      <li>Regional comparisons & trend analysis</li>
     </ul>
 
-    <p><em>© 2025 | Project by Kalyan Dangi | Data Source: NYC Open Data & U.S. BTS</em></p>
-
-    <h2>🎥 Watch Demo</h2>
-    <iframe src="https://www.youtube.com/embed/your_video_id" allowfullscreen></iframe>
+    <p><em>© 2025 | Project by Kalyan Dangi | Data Source: World Health Organization (WHO)</em></p>
   </section>
-
 </body>
 </html>
