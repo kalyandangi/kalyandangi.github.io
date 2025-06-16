@@ -12,6 +12,12 @@
       color: #333;
       line-height: 1.6;
     }
+    .full-width-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
     header {
       background: #005d57;
       color: white;
@@ -67,9 +73,8 @@
     <h2>📊 Dashboard Pages</h2>
 
     <h3>1. Green Taxi Travel</h3>
-    <img src="https://github.com/kalyandangi/NYC-taxi-dashboard/blob/main/visuals/green-taxi-information.png?raw=true" 
-     alt="Green Taxi Information Chart" 
-     style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    <img class="full-width-img" src="https://github.com/kalyandangi/NYC-taxi-dashboard/blob/main/visuals/green-taxi-information.png?raw=true" 
+      alt="Green Taxi Information Chart">
 
     <ul>
     <ul>
@@ -78,7 +83,11 @@
       <li>Week 5 had highest weekday demand</li>
     </ul>
 
-    <h3>2. Yellow Taxi Travel</h3>
+    <h3>2. Yellow Taxi Travel</h3> 
+      <img class="full-width-img" src="https://github.com/kalyandangi/NYC-taxi-dashboard/blob/main/visuals/yellow-taxi-information.png?raw=true" 
+        alt="Yellow Taxi Travel Chart">
+
+
     <ul>
       <li>Manhattan had 92.98% of usage (11.6M trips)</li>
       <li>Highest fare: Murray Hill ($4,008)</li>
