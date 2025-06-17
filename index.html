@@ -4,100 +4,175 @@
   <meta charset="UTF-8" />
   <title>Kalyan Dangi | Data Analyst Portfolio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    /* Core palette and reset */
+    :root {
+      --dark: #004d40;
+      --accent: #00bfa5;
+      --light: #f2f7f8;
+      --text: #212121;
+      --white: #fff;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f7fa;
-      color: #333;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
       line-height: 1.6;
     }
+
+    /* Header (hero section) */
     header {
-      background: #005d57;
-      color: white;
-      padding: 2rem;
+      background-color: var(--dark);
+      color: var(--white);
       text-align: center;
+      padding: 3rem 1rem 4rem;
     }
-    section, .section {
-      max-width: 1000px;
-      margin: auto;
+
+    header img.profile {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid var(--accent);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    /* Main layout */
+    main {
+      max-width: 960px;
+      margin: -3rem auto 2rem;
+      padding: 1rem;
+    }
+
+    section {
+      background-color: var(--white);
+      border-radius: 12px;
       padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
-    h1 {
-      color: white;
-      margin: 0.5rem 0 0.25rem 0;
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
     }
-    h2, h3 {
-      color: #005d57;
-      border-bottom: none; /* Remove old border */
-      padding-bottom: 0;
+
+    ul {
+      padding-left: 1.25rem;
+      list-style-type: square;
     }
+
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+
     a {
-      color: #007BFF;
+      color: var(--accent);
+      font-weight: 600;
       text-decoration: none;
+      transition: 0.3s ease all;
     }
+
     a:hover {
+      color: var(--dark);
       text-decoration: underline;
     }
-    ul {
-      padding-left: 20px;
-      margin-top: 0.5rem;
+
+    /* Resume Download Box */
+    .resume-box {
+      background-color: #e0f2f1;
+      border-left: 6px solid var(--accent);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
     }
-    .highlight {
-      background-color: #e8f5e9;
+
+    .resume-box a {
+      background-color: var(--accent);
+      color: var(--white);
       padding: 0.5rem 1rem;
-      border-left: 5px solid #4caf50;
-      margin: 1rem 0;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
-    /* Profile image styling */
-    img.profile {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 1rem auto;
-      border: 3px solid white;
+
+    .resume-box a:hover {
+      background-color: var(--dark);
     }
-    p {
-      margin-top: 0.25rem;
-      margin-bottom: 1rem;
+
+    .contact a {
+      margin-right: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Home / About Me -->
   <header>
-    <img src="kalyan.jpg" alt="Profile photo" class="profile" />
+    <img src="kalyan.jpg" alt="Kalyan Dangi" class="profile">
     <h1>Kalyan Dangi</h1>
-    <p>Data Analyst | Power BI | Python | Data Storytelling</p>
+    <p>Data Analyst · Power BI · Python · Data Storytelling</p>
   </header>
 
-  <!-- Projects -->
-  <section class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>NYC Taxi Dashboard (Power BI)</strong> – <a href="nyc-taxi-project.html">View Case Study</a></li>
-      <li><strong>Global TB Insights</strong> – <a href="global-tb-insights">View Case Study</a></li>
-      <li><strong>Crop Health ML Dashboard</strong> – <a href="https://youtu.be/demo456" target="_blank" rel="noopener noreferrer">Video</a></li>
-    </ul>
-  </section>
+  <main>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>NYC Taxi Dashboard (Power BI)</strong> – <a href="nyc-taxi-project.html">View Case Study</a></li>
+        <li><strong>Global TB Insights</strong> – <a href="global-tb-insights">View Case Study</a></li>
+        <li><strong>Crop Health ML Dashboard</strong> – <a href="https://youtu.be/demo456" target="_blank">Watch Video</a></li>
+      </ul>
+    </section>
 
-  <!-- Resume -->
-  <section class="section">
-    <h2>Resume</h2>
-    <p>Download my resume here: <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume.pdf</a></p>
-    <p>Highlights: 3+ years of experience, Tableau & Power BI expert, SQL and Python proficient</p>
-  </section>
+    <section>
+      <h2>Resume</h2>
+      <div class="resume-box">
+        <p>Download my resume:</p>
+        <a href="resume.pdf" target="_blank">Resume</a>
+        <p><br><strong>Highlights:</strong> 3+ years of experience · Power BI & Tableau · SQL · Python · Data Viz</p>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section class="section">
-    <h2>Contact</h2>
-    <p>
-      <a href="mailto:kalyandangi@outlook.com">Email</a> | 
-      <a href="https://www.linkedin.com/in/kalyandangi/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-      <a href="https://github.com/kalyandangi" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </p>
-  </section>
+    <section>
+      <h2>Contact</h2>
+      <p class="contact">
+        <a href="mailto:kalyandangi@outlook.com">Email</a>
+        <a href="https://linkedin.com/in/kalyandangi/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/kalyandangi" target="_blank">GitHub</a>
+      </p>
+    </section>
+  </main>
 
 </body>
 </html>
