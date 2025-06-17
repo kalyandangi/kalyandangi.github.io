@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title> Kalyan Dangi | Data Analyst Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Kalyan Dangi | Data Analyst Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 30px;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
     }
     header {
+      background: #005d57;
+      color: white;
+      padding: 2rem;
       text-align: center;
-      margin-bottom: 50px;
     }
-    img.profile {
-      width: 150px;
-      border-radius: 50%;
+    section, .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
     }
     h1 {
-      color: #1a73e8;
-      font-size: 2.5em;
+      color: white;
+      margin: 0.5rem 0 0.25rem 0;
     }
-    h2 {
-      color: #333;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+    h2, h3 {
+      color: #005d57;
+      border-bottom: none; /* Remove old border */
+      padding-bottom: 0;
     }
     a {
-      color: #0066cc;
+      color: #007BFF;
       text-decoration: none;
     }
     a:hover {
@@ -37,48 +41,63 @@
     }
     ul {
       padding-left: 20px;
+      margin-top: 0.5rem;
     }
-    .section {
-      margin-bottom: 40px;
+    .highlight {
+      background-color: #e8f5e9;
+      padding: 0.5rem 1rem;
+      border-left: 5px solid #4caf50;
+      margin: 1rem 0;
+    }
+    /* Profile image styling */
+    img.profile {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem auto;
+      border: 3px solid white;
+    }
+    p {
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🏠 Home / About Me -->
+  <!-- Home / About Me -->
   <header>
-    <img src="kalyan.jpg" alt="Profile photo" class="profile">
+    <img src="kalyan.jpg" alt="Profile photo" class="profile" />
     <h1>Kalyan Dangi</h1>
     <p>Data Analyst | Power BI | Python | Data Storytelling</p>
   </header>
 
-  <!-- 💼 Projects -->
-  <div class="section">
-    <h2>💼 Projects</h2>
+  <!-- Projects -->
+  <section class="section">
+    <h2>Projects</h2>
     <ul>
-      
       <li><strong>NYC Taxi Dashboard (Power BI)</strong> – <a href="nyc-taxi-project.html">View Case Study</a></li>
       <li><strong>Global TB Insights</strong> – <a href="global-tb-insights">View Case Study</a></li>
-      <li><strong>Crop Health ML Dashboard</strong> – <a href="https://youtu.be/demo456">Video</a></li>
+      <li><strong>Crop Health ML Dashboard</strong> – <a href="https://youtu.be/demo456" target="_blank" rel="noopener noreferrer">Video</a></li>
     </ul>
-  </div>
+  </section>
 
-  <!-- 📄 Resume -->
-  <div class="section">
-    <h2>📄 Resume</h2>
-    <p>Download my resume here: <a href="resume.pdf" target="_blank">Resume.pdf</a></p>
+  <!-- Resume -->
+  <section class="section">
+    <h2>Resume</h2>
+    <p>Download my resume here: <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume.pdf</a></p>
     <p>Highlights: 3+ years of experience, Tableau & Power BI expert, SQL and Python proficient</p>
-  </div>
+  </section>
 
-<!-- 📬 Contact -->
-<div class="section">
-  <h2>📬 Contact</h2>
-  <p style="margin-top: 10px;">
-    <a href="mailto:kalyandangi@outlook.com">Email</a> | <a href="https://www.linkedin.com/in/kalyandangi/" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/johndoe" target="_blank">GitHub</a>
-  </p>
-</div>
-
+  <!-- Contact -->
+  <section class="section">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:kalyandangi@outlook.com">Email</a> | 
+      <a href="https://www.linkedin.com/in/kalyandangi/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+      <a href="https://github.com/kalyandangi" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+  </section>
 
 </body>
 </html>
