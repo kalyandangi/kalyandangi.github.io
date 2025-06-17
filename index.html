@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <title>Kalyan Dangi | Data Analyst Portfolio</title>
   <style>
-    /* Core palette and reset */
     :root {
-      --dark: #004d40;
-      --accent: #00bfa5;
-      --light: #f2f7f8;
-      --text: #212121;
-      --white: #fff;
+      --primary: #005d57;
+      --accent: #4caf50;
+      --bg: #f4f7fa;
+      --highlight-bg: #e8f5e9;
+      --link: #007BFF;
+      --white: #ffffff;
     }
 
     * {
@@ -21,15 +21,14 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light);
-      color: var(--text);
+      background-color: var(--bg);
+      color: #333;
       line-height: 1.6;
     }
 
-    /* Header (hero section) */
     header {
-      background-color: var(--dark);
-      color: var(--white);
+      background: var(--primary);
+      color: white;
       text-align: center;
       padding: 3rem 1rem 4rem;
     }
@@ -46,7 +45,7 @@
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.3rem;
-      letter-spacing: 1px;
+      color: white;
     }
 
     header p {
@@ -54,7 +53,6 @@
       opacity: 0.85;
     }
 
-    /* Main layout */
     main {
       max-width: 960px;
       margin: -3rem auto 2rem;
@@ -72,7 +70,7 @@
     h2 {
       font-size: 1.6rem;
       margin-bottom: 1rem;
-      color: var(--dark);
+      color: var(--primary);
       border-left: 4px solid var(--accent);
       padding-left: 0.75rem;
     }
@@ -88,20 +86,19 @@
     }
 
     a {
-      color: var(--accent);
+      color: var(--link);
       font-weight: 600;
       text-decoration: none;
       transition: 0.3s ease all;
     }
 
     a:hover {
-      color: var(--dark);
+      color: var(--primary);
       text-decoration: underline;
     }
 
-    /* Resume Download Box */
     .resume-box {
-      background-color: #e0f2f1;
+      background-color: var(--highlight-bg);
       border-left: 6px solid var(--accent);
       padding: 1rem 1.5rem;
       border-radius: 10px;
@@ -119,7 +116,7 @@
     }
 
     .resume-box a:hover {
-      background-color: var(--dark);
+      background-color: var(--primary);
     }
 
     .contact a {
